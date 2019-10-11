@@ -12,14 +12,23 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @date 2019/10/11
  */
 @ControllerAdvice
-public class AuthExceptionHandler {
+public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = AuthException.class)
     @ResponseBody
-    public ResponseEntity<Void> handleAuthException(AuthException authException) {
+    public ResponseEntity<Void> handleAuthException(AuthException exception) {
         ResponseEntity<Void> responseEntity = new ResponseEntity<>();
-        responseEntity.setCode(authException.getCode());
-        responseEntity.setMessage(authException.getMessage());
+        responseEntity.setCode(exception.getCode());
+        responseEntity.setMessage(exception.getMessage());
+        return responseEntity;
+    }
+
+    @ExceptionHandler(value = IllegalArgumentException.class)
+    @ResponseBody
+    public ResponseEntity<Void> handleIllegalException(IllegalArgumentException exception) {
+        ResponseEntity<Void> responseEntity = new ResponseEntity<>();
+        responseEntity.setCode(-2);
+        responseEntity.setMessage(exception.getMessage());
         return responseEntity;
     }
 }
