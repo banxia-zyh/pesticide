@@ -16,25 +16,25 @@ public class UserAuth {
 
     @Id
     @GeneratedValue
-    private int id;
-    private int userInfoId;
+    private Integer id;
+    private Integer userInfoId;
     private UserAuthType authType;
     private String username;
     private String password;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getUserInfoId() {
+    public Integer getUserInfoId() {
         return userInfoId;
     }
 
-    public void setUserInfoId(int userInfoId) {
+    public void setUserInfoId(Integer userInfoId) {
         this.userInfoId = userInfoId;
     }
 
@@ -60,16 +60,5 @@ public class UserAuth {
 
     public void setPassword(String password) {
         this.password = password;
-    }
-
-    @Override
-    public String toString() {
-        return "UserAuth{" +
-                "id=" + id +
-                ", userInfoId=" + userInfoId +
-                ", authType=" + authType +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
     }
 }

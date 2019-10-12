@@ -1,7 +1,6 @@
 package group.geolo.defectmanager.service;
 
 import group.geolo.defectmanager.entity.Defect;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -12,17 +11,17 @@ import java.util.List;
  */
 public interface DefectService {
 
-    Defect getDefect(int id);
+    Defect getDefect(Integer id);
 
-    List<Defect> getDefectsOfProject(int projectId);
+    List<Defect> getDefectsOfProject(Integer projectId);
 
-    List<Defect> getDefectsOfSubmitUser(int submitUserId);
+    List<Defect> getDefectsOfSubmitUser(Integer submitUserId);
 
-    List<Defect> getDefectsOfResolveUser(int resolveUserId);
+    List<Defect> getDefectsOfResolveUser(Integer resolveUserId);
 
     void addDefect(Defect defect);
 
     void updateDefect(Defect defect);
 
-    void removeDefect(int id);
+    void removeDefect(Integer id);
 }

@@ -20,13 +20,13 @@ public class PersonnelServiceImpl implements PersonnelService {
     private PersonnelRepository personnelRepository;
 
     @Override
-    public Personnel getPersonnel(int personnelId) {
+    public Personnel getPersonnel(Integer personnelId) {
         return personnelRepository.findById(personnelId).orElseThrow(() ->
                 new EntityNotFoundException("personnel of id = " + personnelId + " not found."));
     }
 
     @Override
-    public List<Personnel> getPersonnels(int projectId) {
+    public List<Personnel> getPersonnels(Integer projectId) {
         return personnelRepository.findPersonnelsByProjectId(projectId);
     }
 
@@ -41,7 +41,7 @@ public class PersonnelServiceImpl implements PersonnelService {
     }
 
     @Override
-    public void removePersonnel(int personnelId) {
+    public void removePersonnel(Integer personnelId) {
         personnelRepository.deleteById(personnelId);
     }
 }

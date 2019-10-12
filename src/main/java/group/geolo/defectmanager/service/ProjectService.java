@@ -13,7 +13,7 @@ public interface ProjectService {
 
     void updateProject(Project project);
 
-    void removeProject(int projectId);
+    void removeProject(Integer projectId);
 
-    Project getProject(int projectId);
+    Project getProject(Integer projectId);
 }

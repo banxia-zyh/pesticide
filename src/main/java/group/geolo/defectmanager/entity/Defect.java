@@ -15,28 +15,28 @@ public class Defect {
 
     @Id
     @GeneratedValue
-    private int id;
-    private int submitUserId;
+    private Integer id;
+    private Integer submitUserId;
     private Date submitTime;
     private String title;
     private String description;
     private DefectState defectState;
-    private int projectId;
-    private int resolveUserId;
+    private Integer projectId;
+    private Integer resolveUserId;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
-    public int getSubmitUserId() {
+    public Integer getSubmitUserId() {
         return submitUserId;
     }
 
-    public void setSubmitUserId(int submitUserId) {
+    public void setSubmitUserId(Integer submitUserId) {
         this.submitUserId = submitUserId;
     }
 
@@ -72,19 +72,19 @@ public class Defect {
         this.defectState = defectState;
     }
 
-    public int getProjectId() {
+    public Integer getProjectId() {
         return projectId;
     }
 
-    public void setProjectId(int projectId) {
+    public void setProjectId(Integer projectId) {
         this.projectId = projectId;
     }
 
-    public int getResolveUserId() {
+    public Integer getResolveUserId() {
         return resolveUserId;
     }
 
-    public void setResolveUserId(int resolveUserId) {
+    public void setResolveUserId(Integer resolveUserId) {
         this.resolveUserId = resolveUserId;
     }
 }

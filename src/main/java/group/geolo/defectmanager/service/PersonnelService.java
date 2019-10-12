@@ -11,13 +11,13 @@ import java.util.List;
  */
 public interface PersonnelService {
 
-    Personnel getPersonnel(int personnelId);
+    Personnel getPersonnel(Integer personnelId);
 
-    List<Personnel> getPersonnels(int projectId);
+    List<Personnel> getPersonnels(Integer projectId);
 
     void addPersonnel(Personnel personnel);
 
     void updatePersonnel(Personnel personnel);
 
-    void removePersonnel(int personnelId);
+    void removePersonnel(Integer personnelId);
 }

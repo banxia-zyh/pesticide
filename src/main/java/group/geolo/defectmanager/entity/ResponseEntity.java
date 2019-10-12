@@ -7,7 +7,7 @@ package group.geolo.defectmanager.entity;
  */
 public class ResponseEntity<T> {
 
-    private int code;
+    private Integer code;
     private T data;
     private String message;
 
@@ -24,11 +24,11 @@ public class ResponseEntity<T> {
         this.message = message;
     }
 
-    public int getCode() {
+    public Integer getCode() {
         return code;
     }
 
-    public void setCode(int code) {
+    public void setCode(Integer code) {
         this.code = code;
     }
 

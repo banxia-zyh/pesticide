@@ -17,19 +17,19 @@ public class UserInfo {
 
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
     private String username;
-    private char sex;
+    private Character sex;
     private Date birthday;
     private String address;
     private String avatarUrl;
     private String intro;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -41,11 +41,11 @@ public class UserInfo {
         this.username = username;
     }
 
-    public char getSex() {
+    public Character getSex() {
         return sex;
     }
 
-    public void setSex(char sex) {
+    public void setSex(Character sex) {
         this.sex = sex;
     }
 
@@ -79,18 +79,5 @@ public class UserInfo {
 
     public void setIntro(String intro) {
         this.intro = intro;
-    }
-
-    @Override
-    public String toString() {
-        return "UserInfo{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", sex=" + sex +
-                ", birthday=" + birthday +
-                ", address='" + address + '\'' +
-                ", avatarUrl='" + avatarUrl + '\'' +
-                ", intro='" + intro + '\'' +
-                '}';
     }
 }

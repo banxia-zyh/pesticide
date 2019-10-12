@@ -15,17 +15,17 @@ public class Project {
 
     @Id
     @GeneratedValue
-    private int id;
+    private Integer id;
     private String name;
     private String intro;
     private Date createTime;
-    private int managerId;
+    private Integer managerId;
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -53,22 +53,11 @@ public class Project {
         this.createTime = createTime;
     }
 
-    public int getManagerId() {
+    public Integer getManagerId() {
         return managerId;
     }
 
-    public void setManagerId(int managerId) {
+    public void setManagerId(Integer managerId) {
         this.managerId = managerId;
-    }
-
-    @Override
-    public String toString() {
-        return "Project{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", intro='" + intro + '\'' +
-                ", createTime=" + createTime +
-                ", managerId=" + managerId +
-                '}';
     }
 }

@@ -19,7 +19,7 @@ public class ProjectServiceImpl implements ProjectService {
     private ProjectRepository projectRepository;
 
     @Override
-    public Project getProject(int projectId) {
+    public Project getProject(Integer projectId) {
         return projectRepository.findById(projectId).orElseThrow(() ->
                 new EntityNotFoundException("project of id = " + projectId + " is not found"));
     }
@@ -41,7 +41,7 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public void removeProject(int projectId) {
+    public void removeProject(Integer projectId) {
         projectRepository.deleteById(projectId);
     }
 }

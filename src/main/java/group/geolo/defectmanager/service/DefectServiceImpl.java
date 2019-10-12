@@ -20,23 +20,23 @@ public class DefectServiceImpl implements DefectService {
     private DefectRepository defectRepository;
 
     @Override
-    public Defect getDefect(int id) {
+    public Defect getDefect(Integer id) {
         return defectRepository.findById(id).orElseThrow(() ->
                 new EntityNotFoundException("defect of id = " + id + "is not found."));
     }
 
     @Override
-    public List<Defect> getDefectsOfProject(int projectId) {
+    public List<Defect> getDefectsOfProject(Integer projectId) {
         return defectRepository.findDefectsByProjectId(projectId);
     }
 
     @Override
-    public List<Defect> getDefectsOfSubmitUser(int submitUserId) {
+    public List<Defect> getDefectsOfSubmitUser(Integer submitUserId) {
         return defectRepository.findDefectsBySubmitUserId(submitUserId);
     }
 
     @Override
-    public List<Defect> getDefectsOfResolveUser(int resolveUserId) {
+    public List<Defect> getDefectsOfResolveUser(Integer resolveUserId) {
         return defectRepository.findDefectsByResolveUserId(resolveUserId);
     }
 
@@ -51,7 +51,7 @@ public class DefectServiceImpl implements DefectService {
     }
 
     @Override
-    public void removeDefect(int id) {
+    public void removeDefect(Integer id) {
         defectRepository.deleteById(id);
     }
 }
