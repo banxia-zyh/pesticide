@@ -15,19 +15,19 @@ import org.springframework.web.bind.annotation.RestController;
  * @date 2019/10/11
  */
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("auth")
 public class AuthController {
 
     @Autowired
     private AuthService authService;
 
-    @PostMapping("/register")
+    @PostMapping("register")
     public ResponseEntity<Void> register(@RequestBody UserAuth userAuth) {
         authService.register(userAuth);
         return new ResponseEntity<>(0);
     }
 
-    @PostMapping("/login")
+    @PostMapping("login")
     public ResponseEntity<Void> login(@RequestBody UserAuth userAuth) {
         authService.login(userAuth);
         return new ResponseEntity<>(0);

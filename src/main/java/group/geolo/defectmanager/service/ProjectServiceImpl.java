@@ -5,6 +5,8 @@ import group.geolo.defectmanager.repository.ProjectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import javax.persistence.EntityNotFoundException;
+
 /**
  * @author 桀骜(Geolo)
  * @version 1.0
@@ -15,6 +17,12 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Autowired
     private ProjectRepository projectRepository;
+
+    @Override
+    public Project getProject(int projectId) {
+        return projectRepository.findById(projectId).orElseThrow(() ->
+                new EntityNotFoundException("project of id = " + projectId + " is not found"));
+    }
 
     @Override
     public void addProject(Project project) {
@@ -35,10 +43,5 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public void removeProject(int projectId) {
         projectRepository.deleteById(projectId);
-    }
-
-    @Override
-    public Project getProject(int projectId) {
-        return projectRepository.findById(projectId).orElse(null);
     }
 }

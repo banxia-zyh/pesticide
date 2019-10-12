@@ -11,7 +11,8 @@ import org.springframework.web.bind.annotation.*;
  * @version 1.0
  * @date 2019/10/11
  */
-@RestController("/project")
+@RestController
+@RequestMapping("project")
 public class ProjectController {
 
     @Autowired
