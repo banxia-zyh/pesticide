@@ -22,17 +22,17 @@
                                     <div class="form-group">
                                         <input class="input-material" data-msg="Please enter your username"
                                                id="login-username"
-                                               name="username" required
-                                               type="text" v-model="userAuth.username"
-                                        placeholder="用户名">
+                                               name="username" placeholder="用户名"
+                                               required type="text"
+                                               v-model="userAuth.username">
                                         <!--<label class="label-material" for="login-username" v-if="!hasData">用户名</label>-->
                                     </div>
                                     <div class="form-group">
                                         <input class="input-material" data-msg="Please enter your password"
                                                id="login-password"
-                                               name="password" required
-                                               type="password" v-model="userAuth.password"
-                                               placeholder="密码">
+                                               name="password" placeholder="密码"
+                                               required type="password"
+                                               v-model="userAuth.password">
                                         <!--<label class="label-material" for="login-password" v-if="!hasData">密码</label>-->
                                     </div>
                                     <a @click="login" class="btn btn-primary" id="login">登录</a>
@@ -80,12 +80,11 @@
         },
         methods: {
             login () {
-                AuthService.login(this.userAuth, response => {
-                    if (response.data.code === 0) {
-                        this.$router.replace({path: '/index'})
-                    } else {
-                        alert('登录失败！' + response.data.message)
-                    }
+                AuthService.login(this.userAuth, data => {
+                    console.log(data)
+                    this.$router.replace({path: '/index'})
+                }, function (code, message) {
+                    alert('登录失败！' + message)
                 })
             }
         }

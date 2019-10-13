@@ -23,14 +23,17 @@
         },
         methods: {
             login () {
-                let self = this
+                // let self = this
                 AuthService.register(this.userAuth, response => {
-                    if (response.data.code === 0) {
-                        alert('注册成功！')
-                        self.$router.replace({name: 'Login', params: {userAuth: self.userAuth}})
-                    } else {
-                        alert('注册失败！' + response.data.message)
-                    }
+                    console.log(response)
+                    // if (response.data.code === 0) {
+                    //     alert('注册成功！')
+                    //     self.$router.replace({name: 'Login', params: {userAuth: self.userAuth}})
+                    // } else {
+                    //     alert('注册失败！' + response.data.message)
+                    // }
+                }, (code, message) => {
+                    console.log('code = ' + code + ', message = ' + message)
                 })
             }
         }

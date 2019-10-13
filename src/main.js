@@ -3,6 +3,7 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import './config/InterceptorConfig'
 
 Vue.config.productionTip = false
 Vue.prototype.eventBus = new Vue()

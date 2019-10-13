@@ -10,7 +10,7 @@
                         <label class="col-sm-3 form-control-label" style="margin: auto">昵称</label>
                         <div class="col-sm-9">
                             <input :disabled="editDisable" class="form-control form-control-success"
-                                   placeholder="昵称" style="width: 70%;" type="text">
+                                   placeholder="昵称" style="width: 70%;" v-model="userInfo.nickname">
                             <!--<small class="form-text">Example help text that remains unchanged.</small>-->
                         </div>
                     </div>
@@ -18,33 +18,33 @@
                         <label class="col-sm-3 form-control-label" style="margin: auto">性别</label>
                         <div class="col-sm-9">
                             <input :disabled="editDisable" class="form-control form-control-warning"
-                                   placeholder="性别" style="width: 70%;" type="password">
+                                   placeholder="性别" style="width: 70%;" v-model="sexText">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-3 form-control-label" style="margin: auto">生日</label>
                         <div class="col-sm-9">
                             <input :disabled="editDisable" class="form-control form-control-warning"
-                                   placeholder="生日" style="width: 70%;" type="password">
+                                   placeholder="生日" style="width: 70%;" v-model="userInfo.birthday">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-3 form-control-label" style="margin: auto">地址</label>
                         <div class="col-sm-9">
                             <input :disabled="editDisable" class="form-control form-control-warning"
-                                   placeholder="地址" style="width: 70%;" type="password">
+                                   placeholder="地址" style="width: 70%;" v-model="userInfo.address">
                         </div>
                     </div>
                     <div class="form-group row">
                         <label class="col-sm-3 form-control-label" style="margin: auto">简介</label>
                         <div class="col-sm-9">
-                            <input :disabled="editDisable" class="form-control form-control-warning"
-                                   placeholder="简介" style="width: 70%;" type="password">
+                            <input :disabled="editDisable" class="form-control form-contxol-warning"
+                                   placeholder="简介" style="width: 70%;" v-model="userInfo.intro">
                         </div>
                     </div>
                     <div class="form-group row">
                         <div class="col-sm-12">
-                            <button @click="editDisable? editDisable=false: saveUserInfo" class="btn btn-primary"
+                            <button @click="saveUserInfo" class="btn btn-primary"
                                     style="width: 30%">{{buttonText}}
                             </button>
                         </div>
@@ -74,25 +74,31 @@
             }
         },
         created () {
-            UserService.getUserInfo(response => {
-                if (response.data.code === 0) {
-                    this.userInfo = response.data.data
-                }
-                // TODO 错误提示
+            UserService.getUserInfo(data => {
+                this.userInfo = data
+                this.userInfo.intro = data.intro
             })
         },
         computed: {
             buttonText () {
                 return this.editDisable ? '编辑' : '保存'
+            },
+            sexText () {
+                return this.userInfo.sex === 'm' ? '男' : '女'
             }
         },
         methods: {
             saveUserInfo () {
-                UserService.updateUserInfo(this.userInfo, response => {
-                    if (response.data.code === 0) {
+                if (this.editDisable) {
+                    this.editDisable = false
+                } else {
+                    UserService.updateUserInfo(this.userInfo, data => {
                         this.editDisable = true
-                    }
-                })
+                    }, error => {
+                        alert('网络错误')
+                        console.log(error)
+                    })
+                }
             }
         }
     }

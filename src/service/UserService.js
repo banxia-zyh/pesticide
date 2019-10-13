@@ -1,4 +1,4 @@
-import UserApi from '../network/UserApi'
+import UserApi from '../network/api/UserApi'
 
 export default {
     getUserInfo (success, error) {
