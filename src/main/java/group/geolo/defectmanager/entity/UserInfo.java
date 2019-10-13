@@ -18,7 +18,7 @@ public class UserInfo {
     @Id
     @GeneratedValue
     private Integer id;
-    private String username;
+    private String nickname;
     private Character sex;
     private Date birthday;
     private String address;
@@ -33,12 +33,12 @@ public class UserInfo {
         this.id = id;
     }
 
-    public String getUsername() {
-        return username;
+    public String getNickname() {
+        return nickname;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setNickname(String nickname) {
+        this.nickname = nickname;
     }
 
     public Character getSex() {

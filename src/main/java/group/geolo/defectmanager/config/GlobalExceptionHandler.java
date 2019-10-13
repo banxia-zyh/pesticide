@@ -1,5 +1,6 @@
 package group.geolo.defectmanager.config;
 
+import com.auth0.jwt.exceptions.JWTVerificationException;
 import group.geolo.defectmanager.entity.ResponseEntity;
 import group.geolo.defectmanager.exception.AuthException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -14,6 +15,14 @@ import javax.persistence.EntityNotFoundException;
  */
 @RestControllerAdvice
 public class GlobalExceptionHandler {
+
+    @ExceptionHandler(JWTVerificationException.class)
+    public ResponseEntity<Void> handleJWTVerificationException(JWTVerificationException exception) {
+        ResponseEntity<Void> responseEntity = new ResponseEntity<>();
+        responseEntity.setCode(403);
+        responseEntity.setMessage("client need an authorization");
+        return responseEntity;
+    }
 
     @ExceptionHandler(AuthException.class)
     public ResponseEntity<Void> handleAuthException(AuthException exception) {

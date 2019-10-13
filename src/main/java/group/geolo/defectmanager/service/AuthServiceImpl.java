@@ -30,7 +30,7 @@ public class AuthServiceImpl implements AuthService {
         }
         UserInfo userInfo = new UserInfo();
         // 设置默认用户名
-        userInfo.setUsername(userAuth.getAuthType() + "_" + userAuth.getAuthType());
+        userInfo.setNickname(userAuth.getAuthType() + "_" + userAuth.getAuthType());
         userInfo = userInfoRepository.save(userInfo);
         userAuth.setUserInfoId(userInfo.getId());
         userAuthRepository.save(userAuth);
@@ -46,6 +46,6 @@ public class AuthServiceImpl implements AuthService {
         if (!existUserAuth.getPassword().equals(userAuth.getPassword())) {
             throw new AuthException(-3, "authIdentity or authPassword is error!");
         }
-        return userAuth;
+        return existUserAuth;
     }
 }

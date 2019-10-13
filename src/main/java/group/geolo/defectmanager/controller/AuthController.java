@@ -3,6 +3,7 @@ package group.geolo.defectmanager.controller;
 import group.geolo.defectmanager.entity.ResponseEntity;
 import group.geolo.defectmanager.entity.UserAuth;
 import group.geolo.defectmanager.service.AuthService;
+import group.geolo.defectmanager.util.JwtAuthUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,8 +29,9 @@ public class AuthController {
     }
 
     @PostMapping("login")
-    public ResponseEntity<Void> login(@RequestBody UserAuth userAuth) {
-        authService.login(userAuth);
-        return new ResponseEntity<>(0);
+    public ResponseEntity<String> login(@RequestBody UserAuth userAuth) {
+        userAuth = authService.login(userAuth);
+        String token = JwtAuthUtils.createToken(userAuth.getUserInfoId(), 24 * 60 * 60 * 1000);
+        return new ResponseEntity<>(0, token, null);
     }
 }
