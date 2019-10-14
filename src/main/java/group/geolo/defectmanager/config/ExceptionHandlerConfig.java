@@ -3,6 +3,7 @@ package group.geolo.defectmanager.config;
 import com.auth0.jwt.exceptions.JWTVerificationException;
 import group.geolo.defectmanager.entity.ResponseEntity;
 import group.geolo.defectmanager.exception.AuthException;
+import group.geolo.defectmanager.exception.FileNotFoundException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
@@ -14,7 +15,7 @@ import javax.persistence.EntityNotFoundException;
  * @date 2019/10/11
  */
 @RestControllerAdvice
-public class GlobalExceptionHandler {
+public class ExceptionHandlerConfig {
 
     @ExceptionHandler(JWTVerificationException.class)
     public ResponseEntity<Void> handleJWTVerificationException(JWTVerificationException exception) {
@@ -44,6 +45,14 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Void> handleEntityNotFoundException(EntityNotFoundException exception) {
         ResponseEntity<Void> responseEntity = new ResponseEntity<>();
         responseEntity.setCode(-3);
+        responseEntity.setMessage(exception.getMessage());
+        return responseEntity;
+    }
+
+    @ExceptionHandler(FileNotFoundException.class)
+    public ResponseEntity<Void> handleFileNotFoundException(FileNotFoundException exception) {
+        ResponseEntity<Void> responseEntity = new ResponseEntity<>();
+        responseEntity.setCode(-5);
         responseEntity.setMessage(exception.getMessage());
         return responseEntity;
     }

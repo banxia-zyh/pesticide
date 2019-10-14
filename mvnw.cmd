@@ -1,10 +1,10 @@
 @REM ----------------------------------------------------------------------------
 @REM Licensed to the Apache Software Foundation (ASF) under one
-@REM or more contributor license agreements.  See the NOTICE file
+@REM or more contributor license agreements.  See the NOTICE fileInfo
 @REM distributed with this work for additional information
-@REM regarding copyright ownership.  The ASF licenses this file
+@REM regarding copyright ownership.  The ASF licenses this fileInfo
 @REM to you under the Apache License, Version 2.0 (the
-@REM "License"); you may not use this file except in compliance
+@REM "License"); you may not use this fileInfo except in compliance
 @REM with the License.  You may obtain a copy of the License at
 @REM
 @REM    https://www.apache.org/licenses/LICENSE-2.0
@@ -122,7 +122,7 @@ set WRAPPER_LAUNCHER=org.apache.maven.wrapper.MavenWrapperMain
 
 set DOWNLOAD_URL="https://repo.maven.apache.org/maven2/io/takari/maven-wrapper/0.4.2/maven-wrapper-0.4.2.jar"
 FOR /F "tokens=1,2 delims==" %%A IN (%MAVEN_PROJECTBASEDIR%\.mvn\wrapper\maven-wrapper.properties) DO (
-	IF "%%A"=="wrapperUrl" SET DOWNLOAD_URL=%%B 
+	IF "%%A"=="wrapperUrl" SET DOWNLOAD_URL=%%B
 )
 
 @REM Extension to allow automatically downloading the maven-wrapper.jar from Maven-central

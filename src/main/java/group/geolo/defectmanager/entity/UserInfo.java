@@ -1,5 +1,7 @@
 package group.geolo.defectmanager.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -20,6 +22,7 @@ public class UserInfo {
     private Integer id;
     private String nickname;
     private Character sex;
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-mm-dd")
     private Date birthday;
     private String address;
     private String avatarUrl;
