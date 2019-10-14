@@ -14,5 +14,15 @@ export default {
         axios.put('/api/userInfo', userInfo)
             .then(success)
             .catch(error)
+    },
+    updateAvatar (fileForm, success, error, failure) {
+        HttpClient.request({
+            url: '/api/userInfo/avatar',
+            method: 'POST',
+            data: fileForm,
+            success: success,
+            error: error,
+            failure: failure
+        })
     }
 }
