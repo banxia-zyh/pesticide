@@ -1,5 +1,7 @@
 package group.geolo.defectmanager.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -18,6 +20,7 @@ public class Project {
     private Integer id;
     private String name;
     private String intro;
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-mm-dd")
     private Date createTime;
     private Integer managerId;
 

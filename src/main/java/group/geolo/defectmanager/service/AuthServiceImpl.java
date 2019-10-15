@@ -30,7 +30,7 @@ public class AuthServiceImpl implements AuthService {
         }
         UserInfo userInfo = new UserInfo();
         // 设置默认用户名
-        userInfo.setNickname(userAuth.getAuthType() + "_" + userAuth.getAuthType());
+        userInfo.setNickname(userAuth.getUsername());
         userInfo = userInfoRepository.save(userInfo);
         userAuth.setUserInfoId(userInfo.getId());
         userAuthRepository.save(userAuth);

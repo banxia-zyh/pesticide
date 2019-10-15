@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * @author 桀骜(Geolo)
@@ -17,6 +18,8 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Autowired
     private ProjectRepository projectRepository;
+    @Autowired
+    private HttpServletRequest request;
 
     @Override
     public Project getProject(Integer projectId) {
@@ -26,9 +29,8 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public void addProject(Project project) {
-        if (projectRepository.existsById(project.getId())) {
-            throw new IllegalArgumentException("the inserting project is exist.");
-        }
+        Integer userId = (Integer) request.getSession().getAttribute("userId");
+        project.setManagerId(userId);
         projectRepository.save(project);
     }
 
