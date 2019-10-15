@@ -6,6 +6,9 @@ export default {
     },
 
     login (userAuth, success, error, failure) {
-        AuthApi.login(userAuth, success, error)
+        AuthApi.login(userAuth, data => {
+            localStorage.setItem('loginUsername', userAuth.username)
+            success(data)
+        }, error)
     }
 }

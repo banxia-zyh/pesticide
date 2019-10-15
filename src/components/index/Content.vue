@@ -7,10 +7,12 @@
 <script>
     import UserInfo from '../user/UserInfo'
     import EventBus from '../../util/EventBus'
+    import NewProject from '../project/NewProject'
+    import ProjectList from '../project/ProjectList'
 
     export default {
         name: 'Content',
-        components: {UserInfo},
+        components: {UserInfo, NewProject, ProjectList},
         data () {
             return {
                 componentName: ''

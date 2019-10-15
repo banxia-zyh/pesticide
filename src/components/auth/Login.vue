@@ -35,7 +35,11 @@
                                                v-model="userAuth.password">
                                         <!--<label class="label-material" for="login-password" v-if="!hasData">密码</label>-->
                                     </div>
-                                    <a @click="login" class="btn btn-primary" id="login">登录</a>
+                                    <div class="form-group">
+                                        <button @click="login" class="btn btn-primary"
+                                                name="registerSubmit" type="button">登录
+                                        </button>
+                                    </div>
                                     <!-- This should be submit button but I replaced it with <a> for demo purposes-->
                                 </form>
                                 <a class="forgot-pass" href="#">忘记密码?</a><br>

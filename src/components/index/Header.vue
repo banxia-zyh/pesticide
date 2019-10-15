@@ -15,7 +15,7 @@
                         <!-- Navbar Brand -->
                         <a class="navbar-brand d-none d-sm-inline-block" href="index.html">
                         <div class="brand-text d-none d-lg-inline-block">
-                            <span>Bootstrap </span><strong>Dashboard</strong></div>
+                            <span>软件缺陷管理系统</span></div>
                         <div class="brand-text d-none d-sm-inline-block d-lg-none"><strong>BD</strong></div>
                     </a>
                         <!-- Toggle Button-->

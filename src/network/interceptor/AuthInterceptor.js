@@ -1,7 +1,6 @@
 export default {
     beforeRequest (config) {
-        let authorization = localStorage.getItem('token')
-        config.headers.Authorization = authorization
+        config.headers.Authorization = localStorage.getItem('token')
     },
     errorRequest (error) {
         console.log(error)

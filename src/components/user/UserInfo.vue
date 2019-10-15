@@ -9,11 +9,19 @@
                     <div class="form-group row">
                         <div :style="{
                             backgroundImage: 'url(' + userInfo.avatarUrl + ')',backgroundSize:'contain'}"
-                             class="center">
-                            <div class="outside" onclick="$('#updateInput').click()">上传
+                             class="circle-avatar">
+                            <div class="outside-button" onclick="$('#updateInput').click()">上传
                             </div>
                             <input @change="updateAvatar" accept="image/*" id="updateInput" ref="updateInput"
                                    style="visibility: hidden;" type="file">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-3 form-control-label" style="margin: auto">用户名</label>
+                        <div class="col-sm-9">
+                            <label class="form-control form-control-success"
+                                   style="width: 70%; text-align: left">{{username}}</label>
+                            <!--<small class="form-text">Example help text that remains unchanged.</small>-->
                         </div>
                     </div>
                     <div class="form-group row">
@@ -77,12 +85,14 @@
 
 <script>
     import UserService from '../../service/UserService'
+    import EventBus from '../../util/EventBus'
 
     export default {
         name: 'UserInfo',
         data () {
             return {
                 editDisable: true,
+                username: '',
                 userInfo: {
                     nickname: '',
                     sex: 'm',
@@ -96,6 +106,7 @@
             }
         },
         created () {
+            this.username = localStorage.getItem('loginUsername')
             UserService.getUserInfo(data => {
                 this.userInfo = data
             })
@@ -114,7 +125,12 @@
                     this.editDisable = false
                 } else {
                     console.log(this.userInfo.birthday)
-                    UserService.updateUserInfo(this.userInfo, data => {
+                    UserService.updateUserInfo(this.userInfo, () => {
+                        EventBus.$emit('userInfo-change', {
+                            avatarUrl: this.userInfo.avatarUrl,
+                            nickname: this.userInfo.nickname,
+                            intro: this.userInfo.intro
+                        })
                         this.editDisable = true
                     }, error => {
                         alert('网络错误')
@@ -128,6 +144,7 @@
                     console.log('头像上传成功')
                     UserService.getUserInfo(data => {
                         self.userInfo.avatarUrl = data.avatarUrl
+                        EventBus.$emit('userInfo-change', data)
                     })
                 }, (code, message) => {
                     console.log('上传错误: code:' + code + ', message:' + message)
@@ -138,67 +155,5 @@
 </script>
 
 <style scoped>
-    .center {
-        display: block;
-        position: relative;
-        width: 200px;
-        height: 200px;
-        cursor: pointer;
-        background-size: 100%;
-        background-position: top left;
-        border-radius: 100%;
-        margin: 10px auto;
-        -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-        transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-        box-shadow: 0px 5px 10px #000;
-    }
-
-    .center:hover {
-        box-shadow: 0px 5px 20px #000;
-        background-size: 115%;
-    }
-
-    .center:hover .outside {
-        -webkit-transform: rotate(-45deg) translate(0px) rotate(-315deg);
-        -ms-transform: rotate(-45deg) translate(0px) rotate(-315deg);
-        transform: rotate(-45deg) translate(0px) rotate(-315deg);
-        background: rgba(121, 106, 238, 0.35);
-        width: 200px;
-        letter-spacing: 10px;
-        line-height: 200px;
-        height: 200px;
-        margin-top: -100px;
-        margin-left: -100px;
-        -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
-        transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1), letter-spacing 1.5s ease-out;
-    }
-
-    .center .outside {
-        display: block;
-        position: absolute;
-        line-height: 70px;
-        text-align: center;
-        letter-spacing: 2px;
-        font-weight: 300;
-        color: #fff;
-        font-family: Oswald;
-        border-radius: 100%;
-        width: 70px;
-        height: 70px;
-        background: #796AEE;
-        left: 50%;
-        top: 50%;
-        margin-top: -50px;
-        margin-left: -50px;
-        -webkit-transform: rotate(-180deg) translate(-100px) rotate(180deg);
-        -ms-transform: rotate(-180deg) translate(-100px) rotate(180deg);
-        transform: rotate(-180deg) translate(-100px) rotate(180deg);
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
-        -webkit-transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-        transition: all 0.5s cubic-bezier(0.55, 0, 0.1, 1);
-    }
-
-    .center .outside span {
-        letter-spacing: 0;
-    }
+    @import '../../../static/template/css/circleAvatar.css';
 </style>
