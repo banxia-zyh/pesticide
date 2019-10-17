@@ -1,12 +1,18 @@
 package group.geolo.defectmanager.service;
 
 import group.geolo.defectmanager.entity.Defect;
+import group.geolo.defectmanager.entity.DefectModification;
+import group.geolo.defectmanager.entity.DefectState;
+import group.geolo.defectmanager.repository.DefectModificationRepository;
 import group.geolo.defectmanager.repository.DefectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
+import java.util.Comparator;
+import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  * @author 桀骜(Geolo)
@@ -18,6 +24,15 @@ public class DefectServiceImpl implements DefectService {
 
     @Autowired
     private DefectRepository defectRepository;
+    @Autowired
+    private DefectModificationRepository defectModificationRepository;
+
+    private Comparator<Defect> submitTimeDescComparator = new Comparator<Defect>() {
+        @Override
+        public int compare(Defect o1, Defect o2) {
+            return -(int) (o1.getSubmitTime().getTime() - o2.getSubmitTime().getTime());
+        }
+    };
 
     @Override
     public Defect getDefect(Integer id) {
@@ -27,22 +42,39 @@ public class DefectServiceImpl implements DefectService {
 
     @Override
     public List<Defect> getDefectsOfProject(Integer projectId) {
-        return defectRepository.findDefectsByProjectId(projectId);
+        return defectRepository.findDefectsByProjectId(projectId)
+                .stream()
+                .sorted(submitTimeDescComparator)
+                .collect(Collectors.toList());
     }
 
     @Override
     public List<Defect> getDefectsOfSubmitUser(Integer submitUserId) {
-        return defectRepository.findDefectsBySubmitUserId(submitUserId);
+        return defectRepository.findDefectsBySubmitUserId(submitUserId)
+                .stream()
+                .sorted(submitTimeDescComparator)
+                .collect(Collectors.toList());
     }
 
     @Override
     public List<Defect> getDefectsOfResolveUser(Integer resolveUserId) {
-        return defectRepository.findDefectsByResolveUserId(resolveUserId);
+        return defectRepository.findDefectsByResolveUserId(resolveUserId)
+                .stream()
+                .sorted(submitTimeDescComparator)
+                .collect(Collectors.toList());
     }
 
     @Override
     public void addDefect(Defect defect) {
+        defect.setDefectState(DefectState.SUBMITTED);
+        defect.setSubmitTime(new Date());
         defectRepository.save(defect);
+        DefectModification defectModification = new DefectModification();
+        defectModification.setDefectId(defect.getId());
+        defectModification.setModifyDescription("提交缺陷");
+        defectModification.setModifyUserId(defect.getSubmitUserId());
+        defectModification.setResultState(DefectState.SUBMITTED);
+        defectModificationRepository.save(defectModification);
     }
 
     @Override

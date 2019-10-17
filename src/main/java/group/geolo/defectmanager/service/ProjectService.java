@@ -2,6 +2,8 @@ package group.geolo.defectmanager.service;
 
 import group.geolo.defectmanager.entity.Project;
 
+import java.util.List;
+
 /**
  * @author 桀骜(Geolo)
  * @version 1.0
@@ -16,4 +18,6 @@ public interface ProjectService {
     void removeProject(Integer projectId);
 
     Project getProject(Integer projectId);
+
+    List<Project> getProjectList(Integer userId);
 }

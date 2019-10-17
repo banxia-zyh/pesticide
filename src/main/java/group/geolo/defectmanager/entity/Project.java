@@ -20,7 +20,7 @@ public class Project {
     private Integer id;
     private String name;
     private String intro;
-    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-mm-dd")
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd")
     private Date createTime;
     private Integer managerId;
 

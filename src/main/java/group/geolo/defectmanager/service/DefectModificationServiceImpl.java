@@ -1,7 +1,9 @@
 package group.geolo.defectmanager.service;
 
+import group.geolo.defectmanager.entity.Defect;
 import group.geolo.defectmanager.entity.DefectModification;
 import group.geolo.defectmanager.repository.DefectModificationRepository;
+import group.geolo.defectmanager.repository.DefectRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +20,8 @@ public class DefectModificationServiceImpl implements DefectModificationService 
 
     @Autowired
     private DefectModificationRepository defectModificationRepository;
+    @Autowired
+    private DefectRepository defectRepository;
 
     @Override
     public DefectModification getDefectModification(Integer id) {
@@ -33,5 +37,9 @@ public class DefectModificationServiceImpl implements DefectModificationService 
     @Override
     public void addDefectModification(DefectModification defectModification) {
         defectModificationRepository.save(defectModification);
+        Defect defect = defectRepository.findById(defectModification.getDefectId()).orElseThrow(() ->
+                new EntityNotFoundException("the defect of modification is not found."));
+        defect.setDefectState(defectModification.getResultState());
+        defectRepository.save(defect);
     }
 }

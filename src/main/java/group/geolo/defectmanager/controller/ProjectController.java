@@ -1,13 +1,17 @@
 package group.geolo.defectmanager.controller;
 
 import group.geolo.defectmanager.annotation.Auth;
+import group.geolo.defectmanager.entity.Personnel;
 import group.geolo.defectmanager.entity.Project;
 import group.geolo.defectmanager.entity.ResponseEntity;
+import group.geolo.defectmanager.entity.RoleType;
+import group.geolo.defectmanager.service.PersonnelService;
 import group.geolo.defectmanager.service.ProjectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.List;
 
 /**
  * @author 桀骜(Geolo)
@@ -20,13 +24,17 @@ public class ProjectController {
 
     @Autowired
     private ProjectService projectService;
-    @Autowired
-    private HttpServletRequest request;
 
     @GetMapping
-    public ResponseEntity<Project> getProject(Integer id) {
-        Project project = projectService.getProject(id);
-        return new ResponseEntity<>(0, project, null);
+    public ResponseEntity<Object> getProject(Integer id, Integer userId) {
+        if (id != null) {
+            Project project = projectService.getProject(id);
+            return new ResponseEntity<>(0, project, null);
+        } else if (userId != null) {
+            List<Project> projectList = projectService.getProjectList(userId);
+            return new ResponseEntity<>(0, projectList, null);
+        }
+        return null;
     }
 
     @Auth
