@@ -1,6 +1,6 @@
 <template>
-    <div class="content-inner">
-        <component :is="componentName"></component>
+    <div class="content-inner" style="margin: 20px 0px">
+        <component :is="componentName" v-loading="loading"></component>
     </div>
 </template>
 
@@ -8,19 +8,25 @@
     import UserInfo from '../user/UserInfo'
     import EventBus from '../../util/EventBus'
     import NewProject from '../project/NewProject'
-    import ProjectList from '../project/ProjectList'
+    import MyProjectList from '../project/MyProjectList'
 
     export default {
         name: 'Content',
-        components: {UserInfo, NewProject, ProjectList},
+        components: {UserInfo, NewProject, MyProjectList},
         data () {
             return {
-                componentName: ''
+                componentName: '',
+                loading: false
             }
         },
         mounted () {
             EventBus.$on('change-content', newComponentName => {
-                this.componentName = newComponentName
+                if (newComponentName !== this.componentName) {
+                    this.componentName = newComponentName
+                }
+            })
+            EventBus.$on('update-load', state => {
+                this.loading = state
             })
         }
     }

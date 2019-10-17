@@ -1,5 +1,5 @@
 <template>
-    <div class="col-lg-6">
+    <div>
         <div class="card">
             <div class="card-close">
                 <div class="dropdown">
@@ -14,6 +14,7 @@
             </div>
             <div class="card-header d-flex align-items-center">
                 <h3 class="h4">项目人员</h3>
+                <button @click="addPersonnel">添加</button>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
@@ -30,41 +31,97 @@
                             <th scope="row">{{index + 1}}</th>
                             <td>{{personnel.userId}}</td>
                             <td>{{getRoleTypeName(personnel.roleType)}}</td>
+                            <button @click="edit(personnel)">编辑</button>
+                            <button @click="remove(personnel.id)">删除</button>
                         </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
+        <el-dialog
+            :title="dialogTitle"
+            :visible.sync="dialogVisible"
+            @close="dialogVisible = false">
+            <personnel-editor
+                :personnel="dialogPersonnel"
+                @save-personnel="onSavePersonnel">
+            </personnel-editor>
+        </el-dialog>
     </div>
 </template>
 
 <script>
     import PersonnelService from '../../service/PersonnelService'
     import RoleTypeNameMap from '../../entity/RoleTypeNameMap'
+    import PersonnelEditor from './PersonnelEditor'
 
     export default {
-        name: 'Personnel',
+        name: 'PersonnelList',
+        components: {PersonnelEditor},
         created () {
-            // this.projectId = this.route.params.projectId
-            this.projectId = 124
             this.getPersonnelList()
+        },
+        props: {
+            projectId: ''
         },
         data () {
             return {
                 map: RoleTypeNameMap,
-                projectId: '',
-                personnelList: []
+                personnelList: [],
+                dialogTitle: '',
+                dialogVisible: false,
+                dialogPersonnel: ''
+            }
+        },
+        watch: {
+            projectId () {
+                this.getPersonnelList()
+            },
+            dialogVisible () {
+                this.getPersonnelList()
             }
         },
         methods: {
             getPersonnelList () {
+                if (this.projectId === null || this.projectId === '') {
+                    return
+                }
                 PersonnelService.getPersonnelList(this.projectId, data => {
                     this.personnelList = data
                 })
             },
             getRoleTypeName (roleType) {
                 return this.map.get(roleType)
+            },
+            addPersonnel () {
+                this.dialogTitle = '新增'
+                this.dialogPersonnel = {
+                    projectId: this.projectId
+                }
+                this.dialogVisible = true
+            },
+            edit (personnel) {
+                this.dialogTitle = '编辑'
+                this.dialogPersonnel = personnel
+                this.dialogVisible = true
+            },
+            onSavePersonnel (personnel) {
+                if (this.dialogTitle === '新增') {
+                    PersonnelService.addPersonnel(personnel, () => {
+                        this.dialogVisible = false
+                    })
+                } else if (this.dialogTitle === '编辑') {
+                    PersonnelService.updatePersonnel(personnel, () => {
+                        this.dialogVisible = false
+                    })
+                }
+            },
+            remove (personnelId) {
+                PersonnelService.removePersonnel(personnelId, () => {
+                    this.dialogVisible = false
+                    this.getPersonnelList()
+                })
             }
         }
     }

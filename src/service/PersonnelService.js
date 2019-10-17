@@ -6,5 +6,11 @@ export default {
     },
     addPersonnel (personnel, success, error, failure) {
         PersonnelApi.addPersonnel(personnel, success, error, failure)
+    },
+    updatePersonnel (personnel, success, error, failure) {
+        PersonnelApi.updatePersonnel(personnel, success, error, failure)
+    },
+    removePersonnel(personnelId, success, error, failure) {
+        PersonnelApi.removePersonnel(personnelId, success, error, failure)
     }
 }

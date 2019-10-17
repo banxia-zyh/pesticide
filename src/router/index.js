@@ -6,6 +6,7 @@ import Register from '../components/auth/Register'
 import Index from '../components/index/Index'
 import UserInfo from '../components/user/UserInfo'
 import NewProject from '../components/project/NewProject'
+import SearchInput from '../components/common/SearchInput'
 
 Vue.use(Router)
 
@@ -39,7 +40,7 @@ export default new Router({
         {
             path: '/test',
             name: 'NewPersonnel',
-            component: NewProject
+            component: HelloWorld
         }
     ]
 })

@@ -4,7 +4,7 @@
             <div class="card-header d-flex align-items-center">
                 <h3 class="h4">个人资料</h3>
             </div>
-            <div class="card-body" style="text-align: center">
+            <div class="card-body" style="text-align: center; ">
                 <div class="form-horizontal">
                     <div class="form-group row">
                         <div :style="{
@@ -106,9 +106,11 @@
             }
         },
         created () {
+            EventBus.$emit('update-load', true)
             this.username = localStorage.getItem('loginUsername')
             UserService.getUserInfo(data => {
                 this.userInfo = data
+                EventBus.$emit('update-load', false)
             })
         },
         computed: {

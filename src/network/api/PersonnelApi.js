@@ -13,13 +13,35 @@ export default {
             failure: failure
         })
     },
-    addPersonnel (personnel, success, errror, failure) {
+    addPersonnel (personnel, success, error, failure) {
         HttpClient.request({
             url: '/api/personnel',
             method: 'POST',
             data: personnel,
             success: success,
-            errror: errror,
+            error: error,
+            failure: failure
+        })
+    },
+    updatePersonnel (personnel, success, error, failure) {
+        HttpClient.request({
+            url: '/api/personnel',
+            method: 'PUT',
+            data: personnel,
+            success: success,
+            error: error,
+            failure: failure
+        })
+    },
+    removePersonnel (personnelId, success, error, failure) {
+        HttpClient.request({
+            url: '/api/personnel',
+            method: 'DELETE',
+            params: {
+                personnelId: personnelId
+            },
+            success: success,
+            error: error,
             failure: failure
         })
     }

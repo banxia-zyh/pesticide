@@ -10,11 +10,13 @@
                     <li><a @click.prevent="toMyProjectList" href="#">我的项目</a></li>
                 </ul>
             </li>
+            <span class="heading">缺陷管理</span>
+            <li><a @click.prevent="toNewDefect" href="#"> <i class="icon-padnote"></i>提交缺陷</a></li>
+            <li><a @click.prevent="toMyDefectList" href="#"> <i class="icon-interface-windows"></i>已提交缺陷</a></li>
+            <li><a @click.prevent="toReceivedDefectList" href="#"> <i class="icon-interface-windows"></i>收到的缺陷</a></li>
+
             <li><a href="index.html"> <i class="icon-home"></i>Home </a></li>
-            <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
-            <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>
-            <li><a href="login.html"> <i class="icon-interface-windows"></i>Login page </a></li>
-            <span class="heading">Extras</span>
+            <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li><span class="heading">Extras</span>
             <ul class="list-unstyled">
                 <li><a href="#"> <i class="icon-flask"></i>Demo </a></li>
                 <li><a href="#"> <i class="icon-screen"></i>Demo </a></li>
@@ -27,15 +29,29 @@
 
 <script>
     import EventBus from '../../util/EventBus'
+    import NewDefect from '../defect/NewDefect'
+    import NewProject from '../project/NewProject'
+    import MyProjectList from '../project/MyProjectList'
+    import SubmittedDefectList from '../defect/SubmittedDefectList'
+    import ReceivedDefectList from '../defect/ReceivedDefectList'
 
     export default {
         name: 'Function',
         methods: {
             toNewProject () {
-                EventBus.$emit('change-content', 'NewProject')
+                EventBus.$emit('change-content', NewProject)
             },
             toMyProjectList () {
-                EventBus.$emit('change-content', 'ProjectList')
+                EventBus.$emit('change-content', MyProjectList)
+            },
+            toNewDefect () {
+                EventBus.$emit('change-content', NewDefect)
+            },
+            toMyDefectList () {
+                EventBus.$emit('change-content', SubmittedDefectList)
+            },
+            toReceivedDefectList () {
+                EventBus.$emit('change-content', ReceivedDefectList)
             }
         }
     }
