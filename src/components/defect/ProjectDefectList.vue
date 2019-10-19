@@ -19,7 +19,7 @@
         <tbody>
         <!--<div>-->
         <!--<td scope="row">{{index}}</td>-->
-        <defect-item :defect="defect" :key="index" class="card-body no-padding"
+        <defect-item :defect="defect" :my-role="myRole" :key="index" class="card-body no-padding"
                      v-for="(defect, index) in defectList"/>
         <!--</div>-->
         </tbody>
@@ -32,15 +32,21 @@
 <script>
     import DefectItem from './DefectItem'
     import DefectService from '../../service/DefectService'
+    import EventBus from '../../util/EventBus'
 
     export default {
         name: 'ProjectDefectList',
         components: {DefectItem},
         props: {
-            projectId: ''
+            projectId: '',
+            myRole: ''
         },
         created () {
             this.getDefectList()
+            let self = this
+            EventBus.$on('add-defect-modification-success', () => {
+                self.getDefectList()
+            })
         },
         data () {
             return {

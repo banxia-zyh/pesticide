@@ -15,8 +15,8 @@
             </div>
         </div>
         <button @click="toDetail" class="btn btn-primary btn-sm">详情</button>
-        <button @click="edit" class="btn btn-primary btn-sm">编辑</button>
-        <button @click="remove" class="btn btn-primary btn-sm">删除</button>
+        <button @click="edit" class="btn btn-primary btn-sm" v-if="hasPermission('EDIT')">编辑</button>
+        <button @click="remove" class="btn btn-primary btn-sm" v-if="hasPermission('DELETE')">删除</button>
 
         <el-dialog
             :visible="dialogVisible"
@@ -40,12 +40,17 @@
     import ProjectDetail from './ProjectDetail'
     import EditProject from './EditProject'
     import PersonnelService from '../../service/PersonnelService'
+    import PermissionService from '../../service/PermissionService'
 
     export default {
         name: 'ProjectItem',
         components: {EditProject, ProjectDetail},
         created () {
             this.getPersonnelCount()
+            let self = this
+            PersonnelService.getMyPersonnel(this.project.id, data => {
+                self.myRole = data.roleType
+            })
         },
         props: {
             project: null
@@ -54,7 +59,8 @@
             return {
                 personnelNum: '',
                 dialogVisible: false,
-                detailVisible: false
+                detailVisible: false,
+                myRole: ''
             }
         },
         methods: {
@@ -78,6 +84,9 @@
                     alert('删除成功')
                     self.$emit('delete')
                 })
+            },
+            hasPermission (permission) {
+                return PermissionService.hasPermission(this.myRole, 'PROJECT', permission)
             }
         }
     }

@@ -19,7 +19,7 @@
                     <tbody>
                     <!--<div>-->
                     <!--<td scope="row">{{index}}</td>-->
-                    <defect-item :defect="defect" :key="index" class="card-body no-padding"
+                    <defect-item :defect="defect" my-role="ADMINISTRATOR" :key="index" class="card-body no-padding"
                                  v-for="(defect, index) in defectList"/>
                     <!--</div>-->
                     </tbody>

@@ -1,9 +1,14 @@
 import UserApi from '../network/api/UserApi'
 
 export default {
-    getUserInfo (success, error) {
-        UserApi.getUserInfo(data => {
+    getMyUserInfo (success, error) {
+        UserApi.getUserInfo(null, data => {
             localStorage.setItem('userId', data.id)
+            success(data)
+        }, error)
+    },
+    getUserInfo (userId, success, error) {
+        UserApi.getUserInfo(userId, data => {
             success(data)
         }, error)
     },

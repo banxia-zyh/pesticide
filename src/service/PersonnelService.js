@@ -12,5 +12,17 @@ export default {
     },
     removePersonnel (personnelId, success, error, failure) {
         PersonnelApi.removePersonnel(personnelId, success, error, failure)
+    },
+    getMyPersonnel (projectId, success, error) {
+        let userId = localStorage.getItem('userId')
+        PersonnelApi.getUserPersonnelOfProject(userId, projectId, success, error)
+        // PersonnelApi.getPersonnelList(projectId, data => {
+        //     for (let i = 0; i < data.length; i++) {
+        //         if (data[i].userId == userId) {
+        //             success(data[i])
+        //             return
+        //         }
+        //     }
+        // }, error)
     }
 }

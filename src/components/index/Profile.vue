@@ -31,7 +31,7 @@
             EventBus.$on('userInfo-change', userInfo => {
                 this.userInfo = userInfo
             })
-            UserService.getUserInfo(userInfo => {
+            UserService.getMyUserInfo(userInfo => {
                 this.userInfo = userInfo
             })
         },

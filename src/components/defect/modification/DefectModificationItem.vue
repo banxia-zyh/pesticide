@@ -1,25 +1,27 @@
 <template>
-    <div class="item">
-        <div>{{defectModification.id}}</div>
-        <div>{{defectModification.defectId}}</div>
-        <div>{{defectModification.modifyUserId}}</div>
-        <div>{{defectModification.modifyDescription}}</div>
-        <div>{{defectModificationStateName}}</div>
-        <div>{{defectModification.modifyTime}}</div>
-    </div>
+    <tr>
+        <td>{{defectModification.modifyUsername}}</td>
+        <td>{{defectModification.modifyDescription}}</td>
+        <td :style="{color: stateColor}">{{defectModificationStateName}}</td>
+        <td>{{defectModification.modifyTime}}</td>
+    </tr>
 </template>
 
 <script>
     import DefectStateMap from '../../../entity/DefectStateMap'
+    import StateColorMap from '../../../entity/StateColorMap'
 
     export default {
         name: 'DefectModificationItem',
         props: {
-            defectModification: null
+            defectModification: ''
         },
         computed: {
             defectModificationStateName () {
                 return DefectStateMap.get(this.defectModification.resultState)
+            },
+            stateColor () {
+                return StateColorMap.get(this.defectModification.resultState)
             }
         }
     }

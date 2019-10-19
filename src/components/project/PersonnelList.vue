@@ -23,8 +23,8 @@
             <td>{{getUsername(personnel.userId)}}</td>
             <td>{{getRoleTypeName(personnel.roleType)}}</td>
             <td>
-                <button @click="edit(personnel)" class="btn btn-primary btn-sm">编辑</button>
-                <button @click="remove(personnel.id)" class="btn btn-primary btn-sm">删除</button>
+                <button @click="edit(personnel)" class="btn btn-primary btn-sm" v-if="hasPermission('EDIT')">编辑</button>
+                <button @click="remove(personnel.id)" class="btn btn-primary btn-sm" v-if="hasPermission('DELETE')">删除</button>
             </td>
         </tr>
         </tbody>
@@ -38,6 +38,7 @@
     import PersonnelEditor from './PersonnelEditor'
     import EventBus from '../../util/EventBus'
     import UserService from '../../service/UserService'
+    import PermissionService from '../../service/PermissionService'
 
     export default {
         name: 'PersonnelList',
@@ -49,7 +50,8 @@
             })
         },
         props: {
-            projectId: ''
+            projectId: '',
+            myRole: ''
         },
         data () {
             return {
@@ -116,6 +118,9 @@
                     this.getData()
                     this.dialogVisible = false
                 })
+            },
+            hasPermission (permission) {
+                return PermissionService.hasPermission(this.myRole, 'PERSONNEL', permission)
             }
         }
     }

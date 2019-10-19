@@ -44,5 +44,18 @@ export default {
             error: error,
             failure: failure
         })
+    },
+    getUserPersonnelOfProject (userId, projectId, success, error, failure) {
+        HttpClient.request({
+            url: '/api/personnel',
+            method: 'GET',
+            params: {
+                userId: userId,
+                projectId: projectId
+            },
+            success: success,
+            error: error,
+            failure: failure
+        })
     }
 }

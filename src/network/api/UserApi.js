@@ -2,10 +2,13 @@ import axios from 'axios'
 import HttpClient from '../HttpClient'
 
 export default {
-    getUserInfo (success, error) {
+    getUserInfo (userId, success, error) {
         HttpClient.request({
             url: '/api/userInfo',
             method: 'GET',
+            params: {
+                userId: userId
+            },
             success: success,
             error: error
         })

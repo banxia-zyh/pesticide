@@ -8,25 +8,32 @@
             {{defect.description}}
         </td>
         <td>{{defect.submitTime}}</td>
-        <td>{{defectStateName}}</td>
+        <td :style="{color: stateColor}">{{defectStateName}}</td>
         <td>
-            <button @click="newModificationDialogVisible = true" class="btn btn-primary btn-sm">修改状态</button>
-            <button @click="modificationListDialogVisible = true" class="btn btn-primary btn-sm">操作记录</button>
+            <button
+                @click="newModificationDialogVisible = true"
+                class="btn btn-primary btn-sm"
+                v-if="hasPermission('EDIT_STATE')">修改状态
+            </button>
+            <button
+                @click="modificationListDialogVisible = true"
+                class="btn btn-primary btn-sm">操作记录
+            </button>
         </td>
         <el-dialog
             :visible="newModificationDialogVisible"
             @close="newModificationDialogVisible = false"
             title="修改状态">
             <new-defect-modification
-                v-if="newModificationDialogVisible"
-                :defect-id="defect.id"/>
+                :defect-id="defect.id"
+                v-if="newModificationDialogVisible"/>
         </el-dialog>
         <el-dialog
             :destroy-on-close="true"
             :visible="modificationListDialogVisible"
             @close="modificationListDialogVisible = false"
             title="操作记录">
-            <defect-modification-list v-if="modificationListDialogVisible" :defect-id="defect.id"/>
+            <defect-modification-list :defect-id="defect.id" v-if="modificationListDialogVisible"/>
         </el-dialog>
     </tr>
     <!--</div>-->
@@ -39,12 +46,15 @@
     import DefectModificationList from './modification/DefectModificationList'
     import NewDefectModification from './modification/NewDefectModification'
     import EventBus from '../../util/EventBus'
+    import StateColorMap from '../../entity/StateColorMap'
+    import PermissionService from '../../service/PermissionService'
 
     export default {
         name: 'DefectItem',
         components: {NewDefectModification, DefectModificationList},
         props: {
-            defect: null
+            defect: null,
+            myRole: ''
         },
         created () {
             let self = this
@@ -61,6 +71,14 @@
         computed: {
             defectStateName () {
                 return DefectStateMap.get(this.defect.defectState)
+            },
+            stateColor () {
+                return StateColorMap.get(this.defect.defectState)
+            }
+        },
+        methods: {
+            hasPermission (permission) {
+                return PermissionService.hasPermission(this.myRole, 'DEFECT', permission)
             }
         }
     }

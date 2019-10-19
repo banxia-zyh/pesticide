@@ -83,7 +83,7 @@
                 this.newNickname = user.nickname
                 this.personnel.userId = user.id
             },
-            save() {
+            save () {
                 PersonnelService.addPersonnel(this.personnel, () => {
                     EventBus.$emit('refresh-personnel-list')
                     EventBus.$emit('new-personnel-success')

@@ -47,7 +47,7 @@
         },
         methods: {
             getUserList () {
-                if (this.projectId !== '') {
+                if (this.projectId !== '' && this.projectId !== undefined && this.projectId !== null) {
                     UserService.getUserInfoOfProject(this.projectId, data => {
                         this.userList = data
                     })

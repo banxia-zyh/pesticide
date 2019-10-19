@@ -108,7 +108,7 @@
         created () {
             EventBus.$emit('update-load', true)
             this.username = localStorage.getItem('loginUsername')
-            UserService.getUserInfo(data => {
+            UserService.getMyUserInfo(data => {
                 this.userInfo = data
                 EventBus.$emit('update-load', false)
             })
@@ -144,7 +144,7 @@
                 let self = this
                 UserService.updateAvatar(this.$refs.updateInput.files[0], data => {
                     console.log('头像上传成功')
-                    UserService.getUserInfo(data => {
+                    UserService.getMyUserInfo(data => {
                         self.userInfo.avatarUrl = data.avatarUrl
                         EventBus.$emit('userInfo-change', data)
                     })

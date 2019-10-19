@@ -59,6 +59,14 @@
         },
         methods: {
             addModification () {
+                if (this.defectModification.modifyDescription.trim() === '') {
+                    alert('请输入描述')
+                    return
+                }
+                if (this.defectModification.resultState.trim() === '') {
+                    alert('请选择结果状态')
+                    return
+                }
                 this.defectModification.defectId = this.defectId
                 DefectModificationService.addModification(this.defectModification, () => {
                     EventBus.$emit('add-defect-modification-success')
