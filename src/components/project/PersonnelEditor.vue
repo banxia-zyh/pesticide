@@ -4,7 +4,7 @@
             <label class="col-sm-3 form-control-label" style="margin: auto">用户名</label>
             <div class="col-sm-9">
                 <input @click="selectUser" class="form-control form-control-success" type="text"
-                       v-model="nickname">
+                       v-model="newNickname">
             </div>
         </div>
         <div class="form-group row">
@@ -40,27 +40,32 @@
 <script>
 
     import RoleTypeNameMap from '../../entity/RoleTypeNameMap'
-    import SearchInput from '../common/SearchInput'
     import UserList from '../user/UserList'
 
     export default {
         name: 'PersonnelEditor',
-        components: {UserList, SearchInput},
-        mounted () {
-            this.nickname = ''
-        },
+        components: {UserList},
         props: {
             personnel: {
                 userId: '',
                 projectId: '',
                 roleType: ''
-            }
+            },
+            nickname: ''
+        },
+        mounted () {
+            this.newNickname = this.nickname
         },
         data () {
             return {
                 roleTypeNameMap: RoleTypeNameMap,
                 dialogVisible: false,
-                nickname: ''
+                newNickname: null
+            }
+        },
+        watch: {
+            nickname () {
+                this.newNickname = this.nickname
             }
         },
         methods: {
@@ -69,7 +74,7 @@
             },
             onSelectUser (user) {
                 this.dialogVisible = false
-                this.nickname = user.nickname
+                this.newNickname = user.nickname
                 this.personnel.userId = user.id
             }
         }

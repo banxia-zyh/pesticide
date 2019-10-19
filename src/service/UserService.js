@@ -15,17 +15,11 @@ export default {
         data.append('avatar', avatarFile)
         UserApi.updateAvatar(data, success, error, failure)
     },
-    getAllUserList (succes, error, failure) {
-        // UserApi.getAllUserList(succes, error, failure)
-        let userList = []
-        for (let i = 0; i < 10; i++) {
-            userList.push({
-                nickname: '用户' + i,
-                sex: 'm',
-                intro: 'intro..' + i
-            })
-        }
-        succes(userList)
+    getAllUserList (success, error, failure) {
+        UserApi.getAllUser(success, error, failure)
+    },
+    getUserInfoOfProject (projectId, success, error, failure) {
+        UserApi.getUserInfoOfProject(projectId, success, error, failure)
     }
 
 }

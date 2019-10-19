@@ -12,5 +12,15 @@ export default {
             error: error,
             failure: failure
         })
+    },
+    addModification (defectModification, success, error, failure) {
+        HttpClient.request({
+            url: '/api/defectModification',
+            method: 'POST',
+            data: defectModification,
+            success: success,
+            error: error,
+            failure: failure
+        })
     }
 }

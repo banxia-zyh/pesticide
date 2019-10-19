@@ -10,7 +10,7 @@ export default {
     updatePersonnel (personnel, success, error, failure) {
         PersonnelApi.updatePersonnel(personnel, success, error, failure)
     },
-    removePersonnel(personnelId, success, error, failure) {
+    removePersonnel (personnelId, success, error, failure) {
         PersonnelApi.removePersonnel(personnelId, success, error, failure)
     }
 }

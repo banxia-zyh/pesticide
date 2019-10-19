@@ -12,5 +12,8 @@ export default {
     getReceiveDefectList (success, error, failure) {
         let userId = localStorage.getItem('userId')
         DefectApi.getReceivedDefectList(userId, success, error, failure)
+    },
+    getProjectDefectList (projectId, success, error, failure) {
+        DefectApi.getProjectDefectList(projectId, success, error, failure)
     }
 }

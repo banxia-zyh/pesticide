@@ -21,7 +21,8 @@
                 modificationList: []
             }
         },
-        created () {
+        mounted () {
+            console.log('mounted')
             this.getModificationList()
         },
         methods: {

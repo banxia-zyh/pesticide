@@ -1,5 +1,5 @@
 <template>
-    <div class="col-lg-6">
+    <div class="col-lg-8">
         <div class="card">
             <div class="card-header d-flex align-items-center">
                 <h3 class="h4">新建项目</h3>
@@ -51,9 +51,30 @@
             }
         },
         methods: {
+            validate () {
+                let project = this.project
+                if (project.name.trim() === '') {
+                    alert('请填写项目名称')
+                    return false
+                }
+                if (project.intro.trim() === '') {
+                    alert('请填写项目简介')
+                    return false
+                }
+                if (project.createTime.trim() === '') {
+                    alert('请填写创建时间')
+                    return false
+                }
+                return true
+            },
             addProject () {
+                if (this.validate() !== true) {
+                    return
+                }
+                let self = this
                 ProjectService.addProject(this.project, () => {
                     alert('创建成功！')
+                    self.project = {}
                 }, (code, message) => {
                     alert('创建失败！' + message)
                 })

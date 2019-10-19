@@ -1,51 +1,66 @@
 <template>
-    <div class="item">
-        <div class="feed d-flex justify-content-between">
-            <div class="feed-body d-flex justify-content-between">
-                <div class="content">
-                    <div>id：{{defect.id}}</div>
-                    <div>标题：{{defect.title}}</div>
-                    <div class="full-date">
-                        问题描述：{{defect.description}}
-                    </div>
-                    <div>提交日期：{{defect.submitTime}}</div>
-                    <div>缺陷状态：{{defectStateName}}</div>
-                    <button class="btn btn-primary" @click="toDefectModificationList">操作记录</button>
-                    <el-dialog
-                        :visible="dialogVisible"
-                        @close="dialogVisible = false"
-                        title="操作记录">
-                        <defect-modification-list :defect-id="defect.id"/>
-                    </el-dialog>
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--<div class="item">-->
+    <!--<div class="feed d-flex justify-content-between">-->
+    <!--<div class="feed-body d-flex justify-content-between">-->
+    <tr>
+        <td>{{defect.title}}</td>
+        <td :title="defect.description" class="full-date" style="max-width: 200px">
+            {{defect.description}}
+        </td>
+        <td>{{defect.submitTime}}</td>
+        <td>{{defectStateName}}</td>
+        <td>
+            <button @click="newModificationDialogVisible = true" class="btn btn-primary btn-sm">修改状态</button>
+            <button @click="modificationListDialogVisible = true" class="btn btn-primary btn-sm">操作记录</button>
+        </td>
+        <el-dialog
+            :visible="newModificationDialogVisible"
+            @close="newModificationDialogVisible = false"
+            title="修改状态">
+            <new-defect-modification
+                v-if="newModificationDialogVisible"
+                :defect-id="defect.id"/>
+        </el-dialog>
+        <el-dialog
+            :destroy-on-close="true"
+            :visible="modificationListDialogVisible"
+            @close="modificationListDialogVisible = false"
+            title="操作记录">
+            <defect-modification-list v-if="modificationListDialogVisible" :defect-id="defect.id"/>
+        </el-dialog>
+    </tr>
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
 </template>
 
 <script>
     import DefectStateMap from '../../entity/DefectStateMap'
     import DefectModificationList from './modification/DefectModificationList'
+    import NewDefectModification from './modification/NewDefectModification'
+    import EventBus from '../../util/EventBus'
 
     export default {
         name: 'DefectItem',
-        components: {DefectModificationList},
+        components: {NewDefectModification, DefectModificationList},
         props: {
             defect: null
         },
+        created () {
+            let self = this
+            EventBus.$on('add-defect-modification-success', () => {
+                self.newModificationDialogVisible = false
+            })
+        },
         data () {
             return {
-                dialogVisible: false
+                newModificationDialogVisible: false,
+                modificationListDialogVisible: false
             }
         },
         computed: {
             defectStateName () {
                 return DefectStateMap.get(this.defect.defectState)
-            }
-        },
-        methods: {
-            toDefectModificationList () {
-                this.dialogVisible = true
             }
         }
     }

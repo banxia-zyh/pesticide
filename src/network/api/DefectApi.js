@@ -34,5 +34,17 @@ export default {
             error: error,
             failure: failure
         })
+    },
+    getProjectDefectList (projectId, success, error, failure) {
+        HttpClient.request({
+            url: '/api/defect',
+            method: 'GET',
+            params: {
+                projectId: projectId
+            },
+            success: success,
+            error: error,
+            failure: failure
+        })
     }
 }

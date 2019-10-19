@@ -133,7 +133,7 @@
                         <!-- Logout    -->
                         <li class="nav-item">
                             <router-link :to="{path: '/auth/login'}" class="nav-link logout">
-                                <span class="d-none d-sm-inline">Logout</span>
+                                <span class="d-none d-sm-inline">退出登录</span>
                                 <i class="fa fa-sign-out"></i>
                             </router-link>
                         </li>

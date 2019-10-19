@@ -5,6 +5,7 @@
         <div>{{defectModification.modifyUserId}}</div>
         <div>{{defectModification.modifyDescription}}</div>
         <div>{{defectModificationStateName}}</div>
+        <div>{{defectModification.modifyTime}}</div>
     </div>
 </template>
 

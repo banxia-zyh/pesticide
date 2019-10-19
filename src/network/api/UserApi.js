@@ -24,5 +24,26 @@ export default {
             error: error,
             failure: failure
         })
+    },
+    getAllUser (success, error, failure) {
+        HttpClient.request({
+            url: '/api/userInfo/all',
+            method: 'GET',
+            success: success,
+            error: error,
+            failure: failure
+        })
+    },
+    getUserInfoOfProject (projectId, success, error, failure) {
+        HttpClient.request({
+            url: '/api/userInfo/project',
+            method: 'GET',
+            params: {
+                projectId: projectId
+            },
+            success: success,
+            error: error,
+            failure: failure
+        })
     }
 }
