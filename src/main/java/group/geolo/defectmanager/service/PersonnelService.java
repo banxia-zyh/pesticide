@@ -20,4 +20,6 @@ public interface PersonnelService {
     void updatePersonnel(Personnel personnel);
 
     void removePersonnel(Integer personnelId);
+
+    List<Personnel> getUserPersonnelOfProject(Integer userId, Integer projectId);
 }

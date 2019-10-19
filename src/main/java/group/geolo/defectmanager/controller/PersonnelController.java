@@ -3,7 +3,6 @@ package group.geolo.defectmanager.controller;
 import group.geolo.defectmanager.entity.Personnel;
 import group.geolo.defectmanager.entity.ResponseEntity;
 import group.geolo.defectmanager.service.PersonnelService;
-import org.omg.CORBA.INTERNAL;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,10 +21,14 @@ public class PersonnelController {
     private PersonnelService personnelService;
 
     @GetMapping
-    public ResponseEntity<Object> getPersonnel(Integer personnelId, Integer projectId) {
+    public ResponseEntity<Object> getPersonnel(Integer personnelId, Integer projectId, Integer userId) {
         if (personnelId != null) {
             Personnel personnel = personnelService.getPersonnel(personnelId);
             return new ResponseEntity<>(0, personnel, null);
+        } else if (projectId != null && userId != null) {
+            List<Personnel> personnelList = personnelService.getUserPersonnelOfProject(userId, projectId);
+            //TODO 支持一个用户在一个项目多个角色
+            return new ResponseEntity<>(0, personnelList.get(0), null);
         } else {
             List<Personnel> personnelList = personnelService.getPersonnels(projectId);
             return new ResponseEntity<>(0, personnelList, null);

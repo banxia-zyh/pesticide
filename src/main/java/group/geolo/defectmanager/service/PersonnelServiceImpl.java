@@ -44,4 +44,9 @@ public class PersonnelServiceImpl implements PersonnelService {
     public void removePersonnel(Integer personnelId) {
         personnelRepository.deleteById(personnelId);
     }
+
+    @Override
+    public List<Personnel> getUserPersonnelOfProject(Integer userId, Integer projectId) {
+        return personnelRepository.findPersonnelsByUserIdAndProjectId(userId, projectId);
+    }
 }

@@ -15,4 +15,6 @@ import java.util.List;
 public interface PersonnelRepository extends JpaRepository<Personnel, Integer> {
 
     List<Personnel> findPersonnelsByProjectId(int projectId);
+
+    List<Personnel> findPersonnelsByUserIdAndProjectId(Integer userId, Integer projectId);
 }
