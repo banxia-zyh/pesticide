@@ -19,18 +19,18 @@ public class DefectModificationController {
     private DefectModificationService defectModificationService;
 
     @GetMapping
-    public ResponseEntity<Object> getDefects(Integer id, Integer defectId) {
+    public ResponseEntity<Object> getDefectModifications(Integer id, Integer defectId) {
         Object defectModifications = null;
         if (id != null) {
             defectModifications = defectModificationService.getDefectModification(id);
         } else if (defectId != null) {
-            defectModifications = defectModificationService.getDefectModificationsOfDefect(defectId);
+            defectModifications = defectModificationService.getDefectModificationTablesOfDefect(defectId);
         }
         return new ResponseEntity<>(0, defectModifications, null);
     }
 
     @PostMapping
-    public ResponseEntity<Void> addDefect(@RequestBody DefectModification defectModification) {
+    public ResponseEntity<Void> addDefectModification(@RequestBody DefectModification defectModification) {
         defectModificationService.addDefectModification(defectModification);
         return new ResponseEntity<>(0);
     }

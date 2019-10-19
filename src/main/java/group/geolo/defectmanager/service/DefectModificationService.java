@@ -2,6 +2,7 @@ package group.geolo.defectmanager.service;
 
 import group.geolo.defectmanager.entity.Defect;
 import group.geolo.defectmanager.entity.DefectModification;
+import group.geolo.defectmanager.entity.DefectModificationTable;
 
 import java.util.List;
 
@@ -15,6 +16,8 @@ public interface DefectModificationService {
     DefectModification getDefectModification(Integer id);
 
     List<DefectModification> getDefectModificationsOfDefect(Integer defectId);
+
+    List<DefectModificationTable> getDefectModificationTablesOfDefect(Integer defectId);
 
     void addDefectModification(DefectModification defectModification);
 }

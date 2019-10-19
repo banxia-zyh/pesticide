@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.persistence.EntityNotFoundException;
+import javax.servlet.http.HttpServletRequest;
 import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
@@ -26,6 +27,8 @@ public class DefectServiceImpl implements DefectService {
     private DefectRepository defectRepository;
     @Autowired
     private DefectModificationRepository defectModificationRepository;
+    @Autowired
+    private HttpServletRequest request;
 
     private Comparator<Defect> submitTimeDescComparator = new Comparator<Defect>() {
         @Override
@@ -66,13 +69,16 @@ public class DefectServiceImpl implements DefectService {
 
     @Override
     public void addDefect(Defect defect) {
+        Integer userId = (Integer) request.getSession().getAttribute("userId");
+        defect.setSubmitUserId(userId);
         defect.setDefectState(DefectState.SUBMITTED);
         defect.setSubmitTime(new Date());
-        defectRepository.save(defect);
+        defect = defectRepository.save(defect);
         DefectModification defectModification = new DefectModification();
         defectModification.setDefectId(defect.getId());
         defectModification.setModifyDescription("提交缺陷");
         defectModification.setModifyUserId(defect.getSubmitUserId());
+        defectModification.setModifyTime(new Date());
         defectModification.setResultState(DefectState.SUBMITTED);
         defectModificationRepository.save(defectModification);
     }

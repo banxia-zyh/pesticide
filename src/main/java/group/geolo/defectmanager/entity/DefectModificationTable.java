@@ -1,29 +1,34 @@
 package group.geolo.defectmanager.entity;
 
-import com.fasterxml.jackson.annotation.JsonFormat;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
 import java.util.Date;
 
 /**
  * @author 桀骜(Geolo)
  * @version 1.0
- * @date 2019/10/12
+ * @date 2019/10/19
  */
-@Entity
-public class DefectModification {
+public class DefectModificationTable {
 
-    @Id
-    @GeneratedValue
     private Integer id;
     private Integer defectId;
     private Integer modifyUserId;
-    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
     private Date modifyTime;
     private String modifyDescription;
     private DefectState resultState;
+    private String modifyUsername;
+
+    public DefectModificationTable(DefectModification defectModification, String username) {
+        this.id = defectModification.getId();
+        this.defectId = defectModification.getDefectId();
+        this.modifyUserId = defectModification.getModifyUserId();
+        this.modifyTime = defectModification.getModifyTime();
+        this.modifyDescription = defectModification.getModifyDescription();
+        this.resultState = defectModification.getResultState();
+        this.modifyUsername = username;
+    }
+
+    public DefectModificationTable() {
+    }
 
     public Integer getId() {
         return id;
@@ -49,14 +54,6 @@ public class DefectModification {
         this.modifyUserId = modifyUserId;
     }
 
-    public String getModifyDescription() {
-        return modifyDescription;
-    }
-
-    public void setModifyDescription(String modifyDescription) {
-        this.modifyDescription = modifyDescription;
-    }
-
     public Date getModifyTime() {
         return modifyTime;
     }
@@ -65,11 +62,27 @@ public class DefectModification {
         this.modifyTime = modifyTime;
     }
 
+    public String getModifyDescription() {
+        return modifyDescription;
+    }
+
+    public void setModifyDescription(String modifyDescription) {
+        this.modifyDescription = modifyDescription;
+    }
+
     public DefectState getResultState() {
         return resultState;
     }
 
     public void setResultState(DefectState resultState) {
         this.resultState = resultState;
+    }
+
+    public String getModifyUsername() {
+        return modifyUsername;
+    }
+
+    public void setModifyUsername(String modifyUsername) {
+        this.modifyUsername = modifyUsername;
     }
 }

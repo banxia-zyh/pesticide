@@ -2,7 +2,11 @@ package group.geolo.defectmanager.repository;
 
 import group.geolo.defectmanager.entity.UserInfo;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+
+import java.util.List;
 
 /**
  * @author 桀骜(Geolo)
@@ -11,4 +15,8 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface UserInfoRepository extends JpaRepository<UserInfo, Integer> {
+
+    @Query("select userInfo from UserInfo userInfo, group.geolo.defectmanager.entity.Personnel personnel" +
+            " where personnel.projectId = :projectId and personnel.userId = userInfo.id")
+    List<UserInfo> getUserInfoOfProject(@Param("projectId") Integer projectId);
 }

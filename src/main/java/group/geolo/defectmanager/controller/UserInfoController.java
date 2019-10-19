@@ -3,14 +3,14 @@ package group.geolo.defectmanager.controller;
 import group.geolo.defectmanager.annotation.Auth;
 import group.geolo.defectmanager.entity.ResponseEntity;
 import group.geolo.defectmanager.entity.UserInfo;
-import group.geolo.defectmanager.repository.FileInfo;
 import group.geolo.defectmanager.service.UserInfoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * @author 桀骜(Geolo)
@@ -23,12 +23,31 @@ public class UserInfoController {
 
     @Autowired
     private UserInfoService userInfoService;
+    @Autowired
+    private HttpSession session;
 
     @Auth
     @GetMapping
-    public ResponseEntity<UserInfo> getUserInfo(@SessionAttribute("userId") Integer userId) {
+    public ResponseEntity<UserInfo> getUserInfo(Integer userId) {
+        if (userId == null) {
+            userId = (Integer) session.getAttribute("userId");
+        }
         UserInfo userInfo = userInfoService.getUserInfo(userId);
         return new ResponseEntity<>(0, userInfo, null);
+    }
+
+    @Auth
+    @GetMapping("project")
+    public ResponseEntity<List<UserInfo>> getUserInfoOfProject(Integer projectId) {
+        List<UserInfo> userInfoList = userInfoService.getUserInfoOfProject(projectId);
+        return new ResponseEntity<>(0, userInfoList, null);
+    }
+
+    @Auth
+    @GetMapping("all")
+    public ResponseEntity<List<UserInfo>> getAllUserInfo() {
+        List<UserInfo> userInfoList = userInfoService.getAllUserInfo();
+        return new ResponseEntity<>(0, userInfoList, null);
     }
 
     @Auth
@@ -40,7 +59,7 @@ public class UserInfoController {
 
     @GetMapping("/avatar")
     public void getAvatar(String avatarId) {
-       userInfoService.getAvatar(avatarId);
+        userInfoService.getAvatar(avatarId);
     }
 
     @Auth

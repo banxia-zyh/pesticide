@@ -14,6 +14,7 @@ import javax.persistence.EntityNotFoundException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * @author 桀骜(Geolo)
@@ -36,6 +37,11 @@ public class UserInfoServiceImpl implements UserInfoService {
     public UserInfo getUserInfo(Integer id) {
         return userInfoRepository.findById(id).orElseThrow(() ->
                 new EntityNotFoundException("user info of id =" + id + " is not found."));
+    }
+
+    @Override
+    public List<UserInfo> getAllUserInfo() {
+        return userInfoRepository.findAll();
     }
 
     @Override
@@ -70,5 +76,10 @@ public class UserInfoServiceImpl implements UserInfoService {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    public List<UserInfo> getUserInfoOfProject(Integer projectId) {
+        return userInfoRepository.getUserInfoOfProject(projectId);
     }
 }

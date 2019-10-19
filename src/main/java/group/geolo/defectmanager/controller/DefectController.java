@@ -1,16 +1,21 @@
 package group.geolo.defectmanager.controller;
 
+import group.geolo.defectmanager.annotation.Auth;
 import group.geolo.defectmanager.entity.Defect;
 import group.geolo.defectmanager.entity.ResponseEntity;
 import group.geolo.defectmanager.service.DefectService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import java.util.Date;
+
 /**
  * @author 桀骜(Geolo)
  * @version 1.0
  * @date 2019/10/12
  */
+@Auth
 @RestController
 @RequestMapping("defect")
 public class DefectController {
