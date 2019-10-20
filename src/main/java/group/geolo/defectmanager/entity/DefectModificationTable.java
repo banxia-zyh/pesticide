@@ -1,5 +1,7 @@
 package group.geolo.defectmanager.entity;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.util.Date;
 
 /**
@@ -12,6 +14,7 @@ public class DefectModificationTable {
     private Integer id;
     private Integer defectId;
     private Integer modifyUserId;
+    @JsonFormat(timezone = "GMT+8", pattern = "yyyy-MM-dd HH:mm:ss")
     private Date modifyTime;
     private String modifyDescription;
     private DefectState resultState;
