@@ -28,7 +28,7 @@
         },
         data () {
             return {
-                projectList: []
+                projectList: ''
             }
         },
         methods: {

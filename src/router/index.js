@@ -5,6 +5,8 @@ import HelloWorld from '../components/HelloWorld'
 import Register from '../components/auth/Register'
 import Index from '../components/index/Index'
 import UserInfo from '../components/user/UserInfo'
+import DefectOverview from '../components/statistics/DefectOverview'
+import DefectDailyTrend from '../components/statistics/DefectDailyTrendChart'
 
 Vue.use(Router)
 
@@ -38,7 +40,7 @@ export default new Router({
         {
             path: '/test',
             name: 'NewPersonnel',
-            component: HelloWorld
+            component: DefectDailyTrend
         }
     ]
 })

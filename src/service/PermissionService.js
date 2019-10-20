@@ -1,3 +1,4 @@
+/* eslint-disable */
 export default {
     hasPermission (roleType, target, permission) {
         switch (roleType) {

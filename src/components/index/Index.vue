@@ -15,7 +15,13 @@
 
     export default {
         name: 'Index',
-        components: {Content, Navigation, Header}
+        components: {Content, Navigation, Header},
+        created () {
+            let userId = localStorage.getItem('userId')
+            if (userId === undefined || userId === null || userId === '') {
+                this.$router.replace({path: '/auth/login'})
+            }
+        }
     }
 </script>
 
