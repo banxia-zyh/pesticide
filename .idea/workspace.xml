@@ -2,598 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adbceabd-1f98-43cd-93fa-5652fd320f14" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/Application.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/annotation/Auth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/annotation/AuthType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/config/ExceptionHandlerConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/config/InterceptorConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/config/MongoDBConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/controller/AuthController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/controller/DefectController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/controller/DefectModificationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/controller/PersonnelController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/controller/ProjectController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/controller/UserInfoController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/entity/Defect.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/entity/DefectModification.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/entity/DefectModificationTable.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/entity/DefectState.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/entity/MultipartFileInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/entity/Personnel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/entity/Project.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/entity/ResponseEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/entity/RoleType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/entity/UserAuth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/entity/UserAuthType.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/entity/UserInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/exception/AuthException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/exception/ConfigurationException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/exception/FileNotFoundException.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/interceptor/AuthInterceptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/repository/DefectModificationRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/repository/DefectRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/repository/FileInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/repository/FileRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/repository/MongoDBFileRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/repository/PersonnelRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/repository/ProjectRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/repository/RawFileRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/repository/UserAuthRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/repository/UserInfoRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/service/AuthService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/service/AuthServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/service/DefectModificationService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/service/DefectModificationServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/service/DefectService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/service/DefectServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/service/PersonnelService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/service/PersonnelServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/service/ProjectService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/service/ProjectServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/service/UserInfoService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/service/UserInfoServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/util/IOUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/java/group/geolo/defectmanager/util/JwtAuthUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/resources/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/resources/sql/defect.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/resources/sql/project.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/main/resources/sql/user.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-server/src/test/java/group/geolo/defectmanager/ApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/.babelrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/.eslintignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/.eslintrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/.postcssrc.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/build/build.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/build/check-versions.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/build/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/build/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/build/vue-loader.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/build/webpack.base.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/build/webpack.dev.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/build/webpack.prod.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/config/dev.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/config/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/config/prod.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/config/test.env.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/App.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/auth/Login.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/auth/Register.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/defect/DefectItem.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/defect/NewDefect.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/defect/ProjectDefectList.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/defect/ReceivedDefectList.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/defect/SubmittedDefectList.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/defect/modification/DefectModificationItem.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/defect/modification/DefectModificationList.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/defect/modification/NewDefectModification.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/index/Content.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/index/Function.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/index/Header.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/index/Index.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/index/Navigation.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/index/Profile.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/project/EditProject.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/project/MyProjectList.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/project/NewPersonnel.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/project/NewProject.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/project/PersonnelEditor.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/project/PersonnelList.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/project/ProjectDetail.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/project/ProjectItem.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/project/ProjectList.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/statistics/DefectDailyTrendChart.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/statistics/DefectOverview.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/statistics/PersonnelDefectBarChart.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/statistics/ProjectDefectStatistics.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/user/UserInfo.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/components/user/UserList.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/config/InterceptorConfig.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/entity/DefectStateMap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/entity/RoleTypeNameMap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/entity/StateColorMap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/network/HttpClient.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/network/api/AuthApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/network/api/DefectApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/network/api/DefectModificationApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/network/api/PersonnelApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/network/api/ProjectApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/network/api/UserApi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/network/interceptor/AuthInterceptor.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/router/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/service/AuthService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/service/DefectModificationService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/service/DefectService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/service/PermissionService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/service/PersonnelService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/service/ProjectService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/service/UserService.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/src/util/EventBus.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/charts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/css/circleAvatar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/css/custom.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/css/fontastic.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/css/googlefont.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/css/style.blue.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/css/style.default.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/css/style.green.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/css/style.pink.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/css/style.red.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/css/style.sea.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/css/style.violet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/data/addresses.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/data/countries.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/fonts/dashboard.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/fonts/dashboard.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/fonts/dashboard.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/fonts/dashboard.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/forms.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/icons-reference/fonts/dashboard.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/icons-reference/fonts/dashboard.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/icons-reference/fonts/dashboard.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/icons-reference/fonts/dashboard.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/icons-reference/icons-reference.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/icons-reference/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/avatar-0.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/avatar-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/avatar-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/avatar-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/avatar-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/avatar-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/avatar-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/avatar-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/avatar-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/avatar-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/avatar-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/avatar-9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AD.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AQ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AU.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AW.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/AZ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BB.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BD.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BJ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BW.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BY.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/BZ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CC.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CD.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CK.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CU.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CV.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CW.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CY.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/CZ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/DE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/DJ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/DK.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/DM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/DO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/DZ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/EC.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/EE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/EG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/EH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/ER.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/ES.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/ET.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/EU.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/FI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/FJ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/FK.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/FM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/FO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/FR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GB.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GD.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GQ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GU.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GW.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/GY.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/HK.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/HN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/HR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/HT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/HU.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/IC.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/ID.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/IE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/IL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/IM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/IN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/IQ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/IR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/IS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/IT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/JE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/JM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/JO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/JP.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/KE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/KG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/KH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/KI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/KM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/KN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/KP.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/KR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/KW.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/KY.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/KZ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/LA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/LB.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/LC.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/LI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/LK.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/LR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/LS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/LT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/LU.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/LV.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/LY.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MC.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MD.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/ME.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MK.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/ML.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MP.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MQ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MU.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MV.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MW.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MY.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/MZ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/NA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/NC.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/NE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/NF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/NG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/NI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/NL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/NO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/NP.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/NR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/NU.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/NZ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/OM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/PA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/PE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/PF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/PG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/PH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/PK.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/PL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/PN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/PR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/PS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/PT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/PW.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/PY.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/QA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/RE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/RO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/RS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/RU.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/RW.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SB.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SC.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SD.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SK.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/ST.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SV.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SX.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SY.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/SZ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/TC.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/TD.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/TF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/TG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/TH.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/TJ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/TK.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/TL.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/TM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/TN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/TO.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/TR.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/TT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/TV.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/TW.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/TZ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/UA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/UG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/US.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/UY.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/UZ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/VA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/VC.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/VE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/VG.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/VI.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/VN.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/VU.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/WF.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/WS.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/YE.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/YT.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/ZA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/ZM.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/ZW.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_abkhazia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_basque-country.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_british-antarctic-territory.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_commonwealth.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_england.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_gosquared.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_kosovo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_mars.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_nagorno-karabakh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_nato.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_northern-cyprus.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_olympics.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_red-cross.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_scotland.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_somaliland.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_south-ossetia.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_united-nations.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_unknown.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/flags/16/_wales.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/map-close.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/map-marker-blue.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/map-marker-default.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/map-marker-green.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/map-marker-pink.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/map-marker-red.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/map-marker-sea.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/map-marker-violet.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/map-marker.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/mockup1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/mockup2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/mockup3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/mockup4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/mockup5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/mockup6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/mockup7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/multiselect-switch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/photos/paul-morris-116514-unsplash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/project-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/project-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/project-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/project-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/img/template-mac.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/js/charts-custom.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/js/charts-home.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/js/front.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/js/maxcdn_html5shiv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/js/maxcdn_respond.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/register.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/tables.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/bootstrap/css/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/bootstrap/css/bootstrap-grid.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/bootstrap/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/bootstrap/css/bootstrap-reboot.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/bootstrap/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/bootstrap/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/bootstrap/js/bootstrap.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/bootstrap/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/bootstrap/js/bootstrap.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/bootstrap/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/chart.js/Chart.bundle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/chart.js/Chart.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/chart.js/Chart.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/chart.js/Chart.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/font-awesome/css/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/font-awesome/css/font-awesome.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/font-awesome/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/font-awesome/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/font-awesome/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/font-awesome/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/font-awesome/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/font-awesome/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/additional-methods.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/jquery.validate.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/jquery.validate.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_ar.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_az.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_bg.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_bn_BD.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_ca.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_cs.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_da.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_el.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_es.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_es_AR.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_es_PE.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_et.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_eu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_fa.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_fi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_fr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_ge.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_gl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_he.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_hr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_hu.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_hy_AM.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_id.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_is.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_it.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_ja.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_ka.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_kk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_ko.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_lt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_lv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_mk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_my.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_nl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_no.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_pl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_pt_BR.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_pt_PT.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_ro.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_ru.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_sd.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_si.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_sk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_sl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_sr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_sr_lat.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_sv.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_th.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_tj.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_tr.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_uk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_ur.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_vi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_zh.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/messages_zh_TW.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/methods_de.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/methods_es_CL.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/methods_fi.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/methods_nl.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery-validation/localization/methods_pt.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery.cookie/MIT-LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery.cookie/component.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery.cookie/cookie.jquery.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery.cookie/jquery.cookie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery/core.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery/jquery.slim.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/jquery/jquery.slim.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/popper.js/esm/popper-utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/popper.js/esm/popper-utils.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/popper.js/esm/popper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/popper.js/esm/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/popper.js/popper-utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/popper.js/popper-utils.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/popper.js/popper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/popper.js/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/popper.js/umd/popper-utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/popper.js/umd/popper-utils.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/popper.js/umd/popper.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/static/template/vendor/popper.js/umd/popper.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/test/e2e/custom-assertions/elementCount.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/test/e2e/nightwatch.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/test/e2e/runner.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/test/e2e/specs/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/test/unit/.eslintrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/test/unit/jest.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/test/unit/setup.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/defectmanager-web/test/unit/specs/HelloWorld.spec.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pesticide-server/src/main/java/pers/geolo/pesticide/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/pesticide-server/src/main/java/pers/geolo/pesticide/PesticideApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pesticide-server/src/test/java/pers/geolo/pesticide/ApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/pesticide-server/src/test/java/pers/geolo/pesticide/PesticideApplicationTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/pesticide-server/target/" />
@@ -603,8 +13,28 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pesticide-server/src/main/java/pers/geolo/pesticide/PesticideApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="130">
+              <caret line="6" column="25" selection-start-line="6" selection-start-column="25" selection-end-line="6" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pesticide-server/src/main/java/pers/geolo/pesticide/PesticideApplication.java" />
+      </list>
+    </option>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -627,6 +57,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -668,25 +99,66 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="defectmanager" type="462c0819:PsiDirectoryNode" />
+              <item name="pesticide" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pesticide" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pesticide" type="462c0819:PsiDirectoryNode" />
+              <item name="pesticide-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pesticide" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pesticide" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pesticide" type="462c0819:PsiDirectoryNode" />
+              <item name="pesticide-server" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pesticide" type="462c0819:PsiDirectoryNode" />
+              <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pesticide" type="b2602c69:ProjectViewProjectNode" />
               <item name="pesticide" type="462c0819:PsiDirectoryNode" />
               <item name="pesticide-web" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="pesticide" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="pesticide" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework.data:spring-data-mongodb:2.1.11.RELEASE" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="pesticide" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework.data:spring-data-mongodb:2.1.11.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-data-mongodb-2.1.11.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pesticide" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: org.springframework.data:spring-data-mongodb:2.1.11.RELEASE" type="70bed36:NamedLibraryElementNode" />
+              <item name="spring-data-mongodb-2.1.11.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="mongodb" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="C:/Program Files (x86)/Android/android-sdk" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587712491421" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1587712768034" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
@@ -703,10 +175,23 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.PesticideApplication">
     <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="pesticide-server" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="group.geolo.defectmanager.Application" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PesticideApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="pesticide-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pers.geolo.pesticide.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="pers.geolo.pesticide.PesticideApplication" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -773,6 +258,11 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.PesticideApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -785,30 +275,32 @@
       <option name="presentableId" value="Default" />
       <updated>1587712262081</updated>
       <workItem from="1587712264553" duration="67000" />
+      <workItem from="1587712365996" duration="228000" />
     </task>
+    <task id="LOCAL-00001" summary="重命名项目为pesticide">
+      <created>1587712470744</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1587712470744</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67000" />
+    <option name="totallyTimeSpent" value="373000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="6" />
     <layout>
-      <window_info id="Designer" />
-      <window_info id="Image Layers" />
-      <window_info id="Capture Tool" />
-      <window_info id="UI Designer" />
-      <window_info id="Favorites" side_tool="true" />
-      <window_info id="Web" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25375536" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Spring" />
-      <window_info anchor="bottom" id="Terminal" weight="0.3299435" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="bottom" id="Java Enterprise" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" weight="0.5864407" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -816,17 +308,24 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Maven" />
-      <window_info anchor="right" id="Palette" />
-      <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
-      <window_info anchor="right" id="Palette&#9;" />
-      <window_info anchor="right" id="Theme Preview" />
-      <window_info anchor="right" id="Bean Validation" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3299435" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="11" />
+      <window_info anchor="bottom" id="Database Changes" order="12" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="13" visible="true" weight="0.5864407" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="SciView" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+      <window_info anchor="right" id="Bean Validation" order="10" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -857,6 +356,80 @@
         </entry>
       </map>
     </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="重命名项目为pesticide" />
+    <option name="LAST_COMMIT_MESSAGE" value="重命名项目为pesticide" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/pesticide-server/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-390" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/2.1.11.RELEASE/spring-data-mongodb-2.1.11.RELEASE.jar!/org/springframework/data/mongodb/MongoDbFactory.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pesticide-server/src/main/java/pers/geolo/pesticide/repository/MongoDBFileRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="20" column="3" lean-forward="true" selection-start-line="20" selection-start-column="3" selection-end-line="20" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pesticide-server/src/main/java/pers/geolo/pesticide/config/MongoDBConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pesticide-server/src/main/java/pers/geolo/pesticide/config/InterceptorConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pesticide-server/src/main/java/pers/geolo/pesticide/repository/DefectModificationRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pesticide-server/src/main/java/pers/geolo/pesticide/PesticideApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
   </component>
   <component name="masterDetails">
     <states>
