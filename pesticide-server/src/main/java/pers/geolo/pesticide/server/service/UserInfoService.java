@@ -1,0 +1,27 @@
+package pers.geolo.pesticide.server.service;
+
+import pers.geolo.pesticide.server.entity.UserInfo;
+import pers.geolo.pesticide.server.repository.FileInfo;
+import org.springframework.web.multipart.MultipartFile;
+
+import java.util.List;
+
+/**
+ * @author 桀骜(Geolo)
+ * @version 1.0
+ * @date 2019/10/12
+ */
+public interface UserInfoService {
+
+    UserInfo getUserInfo(Integer id);
+
+    List<UserInfo> getAllUserInfo();
+
+    void updateUserInfo(UserInfo userInfo);
+
+    void updateAvatar(Integer userId, MultipartFile avatarFile);
+
+    FileInfo getAvatar(String avatarId);
+
+    List<UserInfo> getUserInfoOfProject(Integer projectId);
+}
