@@ -16,7 +16,7 @@ import java.util.List;
 @Repository
 public interface UserInfoRepository extends JpaRepository<UserInfo, Integer> {
 
-    @Query("select userInfo from UserInfo userInfo, group.geolo.defectmanager.entity.Personnel personnel" +
+    @Query("select userInfo from UserInfo userInfo, pers.geolo.pesticide.server.entity.Personnel personnel" +
             " where personnel.projectId = :projectId and personnel.userId = userInfo.id")
     List<UserInfo> getUserInfoOfProject(@Param("projectId") Integer projectId);
 }
