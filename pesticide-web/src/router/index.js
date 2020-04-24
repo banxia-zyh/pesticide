@@ -14,8 +14,9 @@ export default new Router({
     routes: [
         {
             path: '/',
-            name: 'HelloWorld',
-            component: HelloWorld
+            redirect() {
+                return '/index'
+            }
         },
         {
             path: '/auth/login',

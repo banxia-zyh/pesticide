@@ -1,7 +1,7 @@
 {
-    "name": "defect-manager-web",
+    "name": "pesticide-web",
     "version": "1.0.0",
-    "description": "a web app of the DefectManager project.",
+    "description": "a web app for manage defect.",
     "author": "Geolo <geolo1997@163.com>",
     "private": true,
     "scripts": {
